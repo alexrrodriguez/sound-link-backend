@@ -1,0 +1,2 @@
+class UserConcert < ApplicationRecord
+end
