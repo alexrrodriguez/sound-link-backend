@@ -14,8 +14,8 @@ Rails.application.routes.draw do
 
   get "/user_concerts/:id" => "user_concerts#show"
 
-  patch "/user_concerts/:id" => "user_concert#update"
+  patch "/user_concerts/:id" => "user_concerts#update"
   
-  delete "/user_concerts/:id" => "user_concert#destroy"
+  delete "/user_concerts/:id" => "user_concerts#destroy"
 
 end
