@@ -14,7 +14,8 @@ class UserConcertsController < ApplicationController
       address: params[:address],
       date: params[:date],
       time: params[:time],
-      tickets: params[:tickets]
+      tickets: params[:tickets],
+      image: params[:image]
     )
     if user_concerts.save
       render json: {message: "User Concert Created Successfully"}, status: :created
@@ -37,6 +38,7 @@ class UserConcertsController < ApplicationController
     user_concert.date = params[:date] || user_concert.date
     user_concert.time = params[:time] || user_concert.time
     user_concert.tickets = params[:tickets] || user_concert.tickets
+    user_concert.image = params[:image] || user_concert.image
     if user_concert.save
       render json: user_concert
     else
